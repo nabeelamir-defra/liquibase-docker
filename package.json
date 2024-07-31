@@ -1,0 +1,13 @@
+{
+  "name": "liquibase-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "migrate:build": "docker build -t liquibase-migrator .",
+    "migrate:up": "docker run -e ACTION=update --rm liquibase-migrator",
+    "migrate:down": "docker run -e ACTION='rollback-count --count=1' --rm liquibase-migrator"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
