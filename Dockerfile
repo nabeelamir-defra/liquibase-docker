@@ -1,5 +1,5 @@
 # Use the official Liquibase image as the base image
-FROM liquibase/liquibase:latest
+FROM liquibase/liquibase:4.29-alpine
 
 # Set the working directory inside the container
 WORKDIR /liquibase
